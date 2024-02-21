@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+    
+
+#Search-input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 400px;
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    color: black;
+}
+
+#search-btn {
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: rgb(246, 118, 5);
+    color: white;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+#search-btn:hover{
+    opacity: 0.8;
+}
+
+.search-results {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.serach-result{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.serach-result img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.serach-result:hover img{
+    opacity: .8;
+} 
+
+.serach-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+#showmore-btn {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: rgb(33, 151, 201);
+    color: white;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin:30px auto;
+    display: none;
+    font-weight: 500;
+
+}
+
+#showmore-btn:hover{
+    opacity: 0.8;
+}
+
+label{
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    right: 20px;
+    top: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+
+label:before{
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 17px;
+    left: 2px;
+    top: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #000;
+    transition: 0.4s;
+    
+}
+
+
+label.active:before{
+    left: 24px;
+    background: #ffffff;
+
+
+}
+
+body.night{
+    background: #000;
+    color: #ffffff; 
+    
+
+}
+
+
+a {
+    color: var(--text-color); /* Use the defined text color variable */
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  a:hover, a:active {
+    color: var(--accent-color); /* Use the defined accent color variable */
+    text-decoration: underline;
+  }
+  
+  body.night a {
+    color: var(--text-color-dark); /* Dark mode text color */
+  }
+  
+  body.night a:hover, body.night a:active {
+    color: var(--accent-color-dark); /* Dark mode accent color */
+  }
+
+
+
+@media screen and (max-width:768px) {
+    .search-results{
+        padding: 20px;
+    }
+    .serach-result{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .serach-result{
+        width: 100%;
+    }
+}
+
